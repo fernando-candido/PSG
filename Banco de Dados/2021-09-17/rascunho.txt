@@ -1,0 +1,150 @@
+
+--COMEÇAR DE ONDE QUER IR
+
+--CONJUNTO BASE
+
+SELECT * FROM PRODUTO
+
+
+DIVIDIR EM UMA CLASE
+
+WHERE (CategoriaID = 10) AND (SubCategoriaID = 65)
+
+
+
+FORMATANDO:
+
+SELECT ProdutoID, SubCategoriaID, SubCategoriaID, CategoriaID, Descricao
+
+FROM PRODUTO AS PRO
+
+WHERE (CategoriaID = 10) AND (SubCategoriaID = 65)
+
+
+
+
+FORMATANDO:  -- COLOCANDO O CONJUNTO PRO, USANDO AS
+
+SELECT PRO.ProdutoID, PRO.SubCategoriaID, PRO.SubCategoriaID, PRO.CategoriaID, PRO.Descricao
+
+FROM PRODUTO AS PRO
+
+WHERE (PRO.CategoriaID = 10) AND (PRO.SubCategoriaID = 65)
+
+
+
+-- CONJUNTO MELHORADO USANDO O PRIMEIRO INNER JOIN
+
+Primeira Junção de Produto com Categoria
+
+INNER JOIN Categoria AS CAT ON PRO.CategoriaID = CAT.CategoriaID
+
+
+-- PEGAR O CAMPO QUE PRECISAMOS, NO CASO É A DESCRIÇÃO.
+
+CAT.Descricao AS CategoriaDescricao
+
+
+
+-- CONJUNTO MELHORADO, UTILIZANDO O PRIMEIRO E O SEGUNDO JOIN
+
+INNER JOIN SubCategoria
+
+====================================================================
+
+
+SELECT PRO.ProdutoID,
+PRO.CategoriaID,
+CAT.Descricao AS CategoriaDescricao,
+PRO.SubCategoriaID,
+SUB.Descricao AS SubCategoriaDescricao,
+PRO.Descricao AS ProdutoDescricao
+
+FROM Produto as PRO -- Localizando de onde é, e dando apelido chamando Produto de PRO.
+INNER JOIN Categoria AS CAT ON PRO.CategoriaID = CAT.CategoriaID
+INNER JOIN SubCategoria AS SUB ON PRO.SubcategoriaID = SUB.SubCategoriaID
+WHERE (PRO.CategoriaID = 5) AND (PRO.SubCategoriaID = 27)
+GO
+
+-- SEMPRE COMEÇA PELO CONJUNTO BASICO.
+-- 
+
+============================================================================
+
+
+
+
+SELECT PRO.ProdutoID,
+PRO.CategoriaID,
+CAT.Descricao AS CategoriaDescricao,
+PRO.SubCategoriaID,
+SUB.Descricao AS SubCategoriaDescricao,
+PRO.ProdutoID,
+PRO.Descricao AS ProdutoDescricao
+---------------------------------------------------------------------------------------
+FROM Produto as PRO -- Localizando de onde é, e dando apelido chamando Produto de PRO.
+INNER JOIN Categoria AS CAT ON PRO.CategoriaID = CAT.CategoriaID
+INNER JOIN SubCategoria AS SUB ON PRO.SubcategoriaID = SUB.SubCategoriaID
+WHERE (PRO.CategoriaID = 5) AND (PRO.SubCategoriaID = 27)
+GO
+
+-- SEMPRE COMEÇA PELO CONJUNTO BASICO.
+-- 
+
+-- ORDENARA AS COLUNAS DO CONJUNTO FINAL. (OPCIONAL)
+
+
+
+==========================================
+
+
+
+
+
+CREATE TABLE TempProduto(
+	CategoriaID INT NOT NULL,
+	CategoriaDescricao VARCHAR(MAX) NOT NULL,
+	SubCategoriaID INT NOT NULL,
+	SubCategoriaDescricao VARCHAR(MAX) NOT NULL,
+	ProdutoID INT NOT NULL PRIMARY KEY,
+	ProdutoDescricao VARCHAR(MAX)NOT NULL,
+	DataInsert DATETIME NULL DEFAULT GETDATE()	
+)
+GO
+
+
+
+INSERT INTO TempProduto (CategoriaID, CategoriaDescricao, SubCategoriaID, SubCategoriaDescricao, ProdutoID, ProdutoDescricao)
+SELECT
+PRO.CategoriaID,
+CAT.Descricao AS CategoriaDescricao,
+PRO.SubCategoriaID,
+SUB.Descricao AS SubCategoriaDescricao,
+PRO.ProdutoID,
+PRO.Descricao AS ProdutoDescricao
+
+FROM Produto AS PRO -- Localizando de onde é, e dando apelido chamando Produto de PRO.
+INNER JOIN Categoria AS CAT ON PRO.CategoriaID = CAT.CategoriaID
+INNER JOIN SubCategoria AS SUB ON PRO.SubcategoriaID = SUB.SubCategoriaID
+GO
+
+DROP TABLE TempProduto;
+
+SELECT * FROM TempProduto;
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+
+

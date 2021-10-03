@@ -1,0 +1,27 @@
+
+/*
+SELECT
+NovoConjunto.MunicipioID,
+--Complementar.CodigoIBGE,
+--Complementar.Nome,
+Complementar.MesoregiaoID,
+Complementar.MicroregiaoID,
+Complementar.UFID,
+NovoConjunto.Descricao,
+NovoConjunto.IBGE,
+--NovoConjunto.IBGE7,
+NovoConjunto.SiglaUF,
+NovoConjunto.Regiao,
+NovoConjunto.Populacao_2010,
+NovoConjunto.Porte,
+NovoConjunto.Capital
+FROM [dbo].[Novo_Conjunto_Municipio_IBGE] AS NovoConjunto
+INNER JOIN [dbo].[Lista_Municipios_Complementar_IBGE] AS Complementar
+ON NovoConjunto.MunicipioID = Complementar.MunicipioID
+
+
+
+
+*/
+
+
