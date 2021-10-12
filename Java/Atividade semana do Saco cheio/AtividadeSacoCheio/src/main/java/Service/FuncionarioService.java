@@ -100,7 +100,12 @@ public class FuncionarioService {
             for (FuncionarioPojo item : this.dao.readAll()) {
             System.out.printf("*****Menu Listar********\n");
             System.out.printf("Funcionario ID: %d \n", item.getFuncionarioID());
+            System.out.printf("Chave: %d \n", item.getChave());
             System.out.printf("Nome: %s \n", item.getNome());
+            System.out.printf("Sobre Nome: %s\n", item.getSobreNome());
+            System.out.printf("Sexo: %c\n", item.getSexo());
+            System.out.printf("Email: %s\n", item.getEmail());
+            System.out.printf("CTPS: %s\n", item.getCtps());
             System.out.printf("**************************\n");
             }
             
@@ -121,6 +126,10 @@ public class FuncionarioService {
             else{
             System.out.printf("Categoria ID: %d \n", item.getFuncionarioID());
             System.out.printf("Nome: %s \n", item.getNome());
+            System.out.printf("Sobre Nome: \n", item.getSobreNome());
+            System.out.printf("Sexo: %c\n", item.getSexo());
+            System.out.printf("Email: %s\n", item.getEmail());
+            System.out.printf("CTPS: %s\n", item.getCtps());
             System.out.printf("**************************\n");     
             
             }
@@ -145,7 +154,7 @@ public class FuncionarioService {
             String nome = this.sc.next();
             item.setNome(nome); 
             System.out.printf("Funcionario ID: %d \n", item.getFuncionarioID());
-            System.out.printf("Nome: %s \n", item.getNome()); 
+            System.out.printf("Nome: %s \n", item.getNome());  
             System.out.println("Funcionario alterado com sucesso.");
             System.out.println("*****************");
 
