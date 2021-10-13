@@ -31,10 +31,10 @@ public class RHFakeDB {
         Date dataInsert = new Date(System.currentTimeMillis());
         adicionarFuncionario(1, 123456789, "Fernando", "Candido", 'm', "oficialfcsj@gmail.com", "471541541", dataInsert);
         adicionarFuncionario(2, 424523452, "Luizão", "Jacinto", 'm', "luizao@gmail.com", "32155615", dataInsert);
-        adicionarFuncionario(3, 824713958, "Hélio", "Akira", 'f', "helio@gmail.com", "654181298", dataInsert);
+        adicionarFuncionario(3, 824713958, "Hélio", "Akira", 'm', "helio@gmail.com", "654181298", dataInsert);
         adicionarFuncionario(4, 114785851, "Giovanni", "Gio", 'm', "giovanni@gmail.com", "185151526", dataInsert);
         adicionarFuncionario(5, 415841889, "Alberto", "Albertinho", 'm', "chicobuarque@gmail.com", "98745235", dataInsert);
-        adicionarFuncionario(6, 784521369, "Gabriel", "Doidao", 'm', "gabriel@gmail.com", "6325148963", dataInsert);
+        adicionarFuncionario(6, 784521369, "Gabriel", "Gab", 'm', "gabriel@gmail.com", "6325148963", dataInsert);
         adicionarFuncionario(7, 523698254, "Wilker", "Wil", 'm', "wilker@gmail.com", "85214365214", dataInsert);
     }
     
