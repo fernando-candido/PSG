@@ -51,13 +51,18 @@ public class FuncionarioController {
 	
 	@PostMapping(path = "/funcionarios")
 	public Funcionario post(@RequestBody Funcionario funcionario) {
+		funcionario.setFuncionarioID(repo.findByFuncionarioIDMAX() + 1);
 		return this.repo.save(funcionario);
 	}
 	
 	@DeleteMapping ("/funcionarios/{id}")
-	public void delete(@PathVariable int id) {
+	public String delete(@PathVariable int id) {
 			if (this.repo.findById(id).orElse(null) != null) {
 				this.repo.deleteById(id);
+				return "Deletado";
+			}
+			else {
+				return "Não possui registro";
 			}
 		
 	}
@@ -67,13 +72,14 @@ public class FuncionarioController {
 		return this.repo.findById(novoFuncionario.getFuncionarioID())
 				.map(fun -> {
 					fun.setFuncionarioID(novoFuncionario.getFuncionarioID());
-					fun.setChaveID(novoFuncionario.getChaveID());
+					fun.setChave(novoFuncionario.getChave());
 					fun.setNome(novoFuncionario.getNome());
 					fun.setSobreNome(novoFuncionario.getSobreNome());
 					fun.setDataAdmissao(novoFuncionario.getDataAdmissao());
 					fun.setSexo(novoFuncionario.getSexo());
 					fun.setNascimento(novoFuncionario.getNascimento());
 					fun.setEmail(novoFuncionario.getEmail());
+					fun.setPaisID(novoFuncionario.getPaisID());
 					fun.setCtps(novoFuncionario.getCtps());
 					fun.setCtpsnum(novoFuncionario.getCtpsnum());
 					fun.setCtpsserie(novoFuncionario.getCtpsserie());
