@@ -1,0 +1,81 @@
+<form name="avaliacao-gestor" class="form-horizontal" role="form"></form>
+
+<!-- nomeCandidato  -->
+
+  <!-- read-only field -->
+  <div class="form-group">
+    <label for="nomeCandidato" class="col-sm-2 control-label">Nome Candidato</label>
+    <div class="col-sm-10">
+      <input type="text" name="nomeCandidato"    cam-variable-name="nomeCandidato" cam-variable-type="String"
+        class="form-control" />
+    </div>
+  </div>
+
+  <!-- telefoneContato  -->
+
+  <!-- read-only field -->
+  <div class="form-group">
+    <label for="telefoneContato" class="col-sm-2 control-label">Telefone Candidato</label>
+    <div class="col-sm-10">
+      <input type="text" name="telefoneContato"    cam-variable-name="telefoneContato" cam-variable-type="String"
+        class="form-control" />
+    </div>
+  </div>
+
+  <!-- email  -->
+
+  <!-- read-only field -->
+  <div class="form-group">
+    <label for="email" class="col-sm-2 control-label">Email Candidato</label>
+    <div class="col-sm-10">
+      <input type="text" name="email"    cam-variable-name="email" cam-variable-type="String" class="form-control" />
+    </div>
+  </div>
+
+
+    <!-- curriculo -->
+
+    <div class="form-group">
+      <label for="curriculo" class="col-sm-2 control-label">Curriculo</label>
+      <div class="col-sm-10">
+        <input type="file" name="curriculo" 
+        cam-variable-name="file" 
+        cam-variable-type="File"
+        cam-max-filesize="1000000"/>
+      </div>
+    </div>
+
+
+<div class="form-group">
+    <label for="observacaoAvaliacaoGestorRH" class="col-sm-2">Observação Avaliacao GestorRH</label>
+    <div class="col-sm-10">
+      <textarea name="observacaoAvaliacaoGestorRH"    cam-variable-name="observacaoAvaliacaoGestorRH"
+        cam-variable-type="String" class="form-control">
+        </textarea>
+    </div>
+  </div>
+
+
+
+
+  <!--  reprovado -->
+
+  <!-- checkbox -->
+  <div class="form-group">
+    <label for="reprovado" class="col-sm-2 control-label">Reprovado</label>
+    <div class="col-sm-10">
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" name="reprovado" cam-variable-name="reprovado" cam-variable-type="Boolean"
+            checked="checked" class="form-control" />
+          reprovado
+        </label>
+      </div>
+    </div>
+  </div>
+
+
+  <script cam-script type="text/form-script">
+    // custom JavaScript goes here
+  </script>
+</form>

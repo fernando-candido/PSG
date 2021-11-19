@@ -1,0 +1,207 @@
+<!--
+You can use this form through Camunda Tasklist
+by setting the formKey of a BPMN User Task to:
+embedded:app:forms/task-form.html
+-->
+
+<form name="taskForm" class="form-horizontal" role="form">
+
+
+
+  <!--   campos que tem em todos   -->
+
+
+  <!-- nomeCandidato  -->
+
+  <!-- read-only field -->
+  <div class="form-group">
+    <label for="nomeCandidato" class="col-sm-2 control-label">Nome Candidato</label>
+    <div class="col-sm-10">
+      <input type="text" name="nomeCandidato"    cam-variable-name="nomeCandidato" cam-variable-type="String"
+        class="form-control" />
+    </div>
+  </div>
+
+  <!-- telefoneContato  -->
+
+  <!-- read-only field -->
+  <div class="form-group">
+    <label for="telefoneContato" class="col-sm-2 control-label">Telefone Candidato</label>
+    <div class="col-sm-10">
+      <input type="text" name="telefoneContato"    cam-variable-name="telefoneContato" cam-variable-type="String"
+        class="form-control" />
+    </div>
+  </div>
+
+  <!-- email  -->
+
+  <!-- read-only field -->
+  <div class="form-group">
+    <label for="email" class="col-sm-2 control-label">Email Candidato</label>
+    <div class="col-sm-10">
+      <input type="text" name="email"    cam-variable-name="email" cam-variable-type="String" class="form-control" />
+    </div>
+  </div>
+
+
+    <!-- curriculo -->
+
+    <input type="file" cam-variable-name="curriculo" camvariable-type="File" cam-max-filesize="10000000" />
+
+    <script cam-script type="text/form-script">
+      // custom JavaScript goes here
+    </script>
+  </form>
+
+
+  <!--         campos que tem em todos ACIMA -->
+
+
+  <!-- observacaoClassificarCurriculo  -->
+
+  <!-- read-only field -->
+
+  <!-- <div class="form-group">
+    <label for="observacaoClassificarCurriculo" class="col-sm-2">Observação Classificar Curriculo</label>
+    <div class="col-sm-10">
+      <textarea name="observacaoClassificarCurriculo" cam-variable-name="observacaoClassificarCurriculo"
+        cam-variable-type="String"     class="form-control">
+      </textarea>
+    </div>
+  </div> --> -->
+
+
+  <!-- observacaoAvaliacaoGestorRH  -->
+
+  <!-- read-only field -->
+  <!-- <div class="form-group">
+    <label for="observacaoAvaliacaoGestorRH" class="col-sm-2">Observação Avaliacao GestorRH</label>
+    <div class="col-sm-10">
+      <textarea name="observacaoAvaliacaoGestorRH"    cam-variable-name="observacaoAvaliacaoGestorRH"
+        cam-variable-type="String" class="form-control">
+        </textarea>
+    </div>
+  </div> -->
+
+
+  <!-- setorClassificado  -->
+
+  <!-- read-only field -->
+  <!-- <div class="form-group">
+    <label for="setorClassificado" class="col-sm-2">Setor Classificado</label>
+    <div class="col-sm-10">
+      <textarea name="setorClassificado" cam-variable-name="setorClassificado"     cam-variable-type="String"
+        class="form-control">
+        </textarea>
+    </div>
+  </div> -->
+
+
+
+  <!-- observacaoAvaliacaoAntecedentes  -->
+
+  <!-- read-only field -->
+  <!-- <div class="form-group">
+    <label for="observacaoAvaliacaoAntecedentes" class="col-sm-2">Observação Avaliação Antecedentes</label>
+    <div class="col-sm-10">
+      <textarea name="observacaoAvaliacaoAntecedentes" cam-variable-name="observacaoAvaliacaoAntecedentes"
+        cam-variable-type="String"    class="form-control">
+        </textarea>
+    </div>
+  </div> -->
+
+
+  <!-- observacaoAvaliacaoInterpessoal  -->
+
+  <!-- read-only field -->
+  <!-- <div class="form-group">
+    <label for="observacaoAvaliacaoInterpessoal" class="col-sm-2">Observação Avaliação Interpessoal</label>
+    <div class="col-sm-10">
+      <textarea name="observacaoAvaliacaoInterpessoal" cam-variable-name="observacaoAvaliacaoInterpessoal"
+        cam-variable-type="String"    class="form-control">
+        </textarea>
+    </div>
+  </div> -->
+
+
+
+  <!-- “observacaoAvaliacaoSetor”  -->
+
+  <!-- read-only field -->
+  <div class="form-group">
+    <label for="observacaoAvaliacaoSetor" class="col-sm-2">Observação Avaliacao Setor</label>
+    <div class="col-sm-10">
+      <textarea name="observacaoAvaliacaoSetor" cam-variable-name="observacaoAvaliacaoSetor"    cam-variable-type="String"
+        class="form-control">
+        </textarea>
+    </div>
+  </div>
+
+
+
+
+  <!-- dataEntrevista  -->
+
+  <!-- read-only field -->
+  <div class="form-group">
+    <label for="dataEntrevista" class="col-sm-2">Data Entrevista</label>
+    <div class="col-sm-10">
+      <input type="text" name="dataEntrevista" cam-variable-name="dataEntrevista" cam-variable-type="Date"    class="form-control">
+    </div>
+  </div>
+
+<!--   agendarEntrevista-->
+<!-- 
+  <div class="form-group">
+    <label for="agendarEntrevista" class="col-sm-2">Agendar Entrevista</label>
+    <div class="col-sm-10">
+      <textarea name="agendarEntrevista" cam-variable-name="agendarEntrevista"     cam-variable-type="String"
+        class="form-control">
+        </textarea>
+    </div>
+  </div> -->
+
+
+
+  <!--  cancelar -->
+
+  <!-- checkbox -->
+  <div class="form-group">
+    <label for="cancelar" class="col-sm-2 control-label">Cancelar</label>
+    <div class="col-sm-10">
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" name="cancelar" cam-variable-name="cancelar" cam-variable-type="Boolean"
+            checked="checked" class="form-control" />
+          cancelar
+        </label>
+      </div>
+    </div>
+  </div>
+
+
+  <!--  reprovado -->
+
+  <!-- checkbox -->
+  <div class="form-group">
+    <label for="reprovado" class="col-sm-2 control-label">Reprovado</label>
+    <div class="col-sm-10">
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" name="reprovado" cam-variable-name="reprovado" cam-variable-type="Boolean"
+            checked="checked" class="form-control" />
+          reprovado
+        </label>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- curriculo -->
+
+  <input type="file" cam-variable-name="curriculo" camvariable-type="File" cam-max-filesize="10000000" />
+
+  <script cam-script type="text/form-script">
+    // custom JavaScript goes here
+  </script>
+</form>
