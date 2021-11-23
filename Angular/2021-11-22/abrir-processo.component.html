@@ -1,0 +1,50 @@
+<!-- <p>abrir-processo works!</p> -->
+
+<!--  style="background-color:rgb(68, 6, 236)"-->
+
+<!-- separar entre ; os comandos-->
+<form>
+    <p style='color: white ; background-color: green; text-align:center'> Meu Primeiro Componante</p>
+
+    <div>
+        <label style='color: green'>  Nome </label>
+        <input  auto type="text" name="nome"  [(ngModel)]="nomeComponentePai" />
+
+    </div>
+
+    <div class=container4>
+
+        <label> SobreNome </label>
+        <input type="text" name="sobreNome" [(ngModel)]="sobreNomeComponentePai" />
+
+    </div>
+
+    <div>
+
+        <label> CEP </label>
+        <input type="string" name="cep" [(ngModel)]="cepComponentePai" />
+
+    </div>
+
+<!-- 
+    {{nomeComponentePai}}
+    {{sobreNomeComponentePai}}
+    {{cepComponentePai}}  NA HORA QUE DIGITAR APARECE NA TELA-->
+
+<app-mensagem  [nome]="nomeComponentePai" [sobreNome] = "sobreNomeComponentePai" [cep] = "cepComponentePai"></app-mensagem>  <!--  -->
+
+<app-buscar-cep> [cep] </app-buscar-cep>
+
+</form>
+
+
+
+<!--
+
+-Criar um input cep nesta tela
+-Criar um novo componente chamado "buscarCEP"
+-O componente buscar-cep deve receber um parametro de entrada [cep] : string
+-O componente buscar-cep deve acessar um serviço de API  ()
+-O retorno da API deve ser viualizado no componente
+
+-->
