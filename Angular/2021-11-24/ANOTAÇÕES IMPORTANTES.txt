@@ -1,0 +1,11 @@
+Criar arquivo camunda no code:
+
+Abrir na pasta que você deseja criar
+criar arquivo maven
+pesquisar camunda
+escolher a pasta
+enter enter em tudo
+
+TEST -> JAVA -> PROCESS UNIT TEST.JAVA  ----> COMENTAR DO TEST PARA BAIXO.
+dps ir em maven, botão direito e install -> vai gerar o .war
+colar dentro do servidor tomcat do CAMUNDA
